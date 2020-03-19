@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:dev": "nodemon dist/index.js",
+    "start:dev": "node dist/index.js",
     "build:dev": "tsc --watch --preserveWatchOutput",
     "dev": "concurrently \"npm run build:dev\" \"npm run start:dev\""
   },
@@ -13,13 +13,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@types/morgan": "^1.9.0",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
-    "morgan": "^1.9.1"
+    "lowdb": "^1.0.0",
+    "morgan": "^1.9.1",
+    "nanoid": "^2.1.11"
   },
   "devDependencies": {
     "@types/express": "^4.17.3",
+    "@types/lowdb": "^1.0.9",
+    "@types/morgan": "^1.9.0",
+    "@types/nanoid": "^2.1.0",
     "concurrently": "^5.1.0"
   }
 }

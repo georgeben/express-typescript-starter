@@ -3,8 +3,16 @@ export interface Config {
   logFormat: string;
 }
 
-export interface ApiResponse {
-  message: string;
-  data?: any;
-  error?: any;
+export interface CreateUser {
+  name: string;
+  email: string;
+  password: string;
+}
+
+export interface User {
+  id: string;
+  name: string;
+  email: string;
+  password: string;
+  createdAt: number;
 }
