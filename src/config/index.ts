@@ -4,12 +4,14 @@ export default function config(): Config {
     case 'production':
       return {
         port: process.env.PORT as string,
-        logFormat: 'combined'
+        logFormat: 'combined',
+        jwtSecret: process.env.JWT_SECRET as string,
       }
     default:
       return {
         port: "3000",
-        logFormat: 'dev'
+        logFormat: 'dev',
+         jwtSecret: process.env.JWT_SECRET as string,
       }
   }
 }

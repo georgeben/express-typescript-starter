@@ -4,6 +4,7 @@ import { userController } from '../../controllers/v1/index';
 const router = Router();
 
 router.post('/register', userController.create);
+router.post('/login', userController.login);
 router.get('/:id', userController.read);
 router.put('/', userController.update);
 router.delete('/', userController.delete);
