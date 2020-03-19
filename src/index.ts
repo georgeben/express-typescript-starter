@@ -3,6 +3,7 @@ import bodyParser from 'body-parser';
 import morgan from 'morgan';
 import config from './config'
 import apiRoutes from './routes';
+import jwtParser from './middlewares/jwt-parser';
 
 const { port, logFormat } = config();
 
@@ -12,7 +13,8 @@ app.use(morgan(logFormat));
 app.use(bodyParser.urlencoded({
   extended: false
 }))
-app.use(bodyParser.json())
+app.use(bodyParser.json());
+app.use(jwtParser);
 
 app.get('/', (req, res) => res.send('Welcome to Express Typescript API'))
 app.use('/api', apiRoutes);

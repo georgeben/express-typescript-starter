@@ -1,6 +1,6 @@
 import nanoid from 'nanoid';
 import { LowdbSync } from 'lowdb';
-import { CreateUser, User } from '../types';
+import { CreateUser, User, UpdateUser } from '../types';
 
 const createUserModel = (db: LowdbSync<any>) => {
   return {
@@ -17,6 +17,14 @@ const createUserModel = (db: LowdbSync<any>) => {
         .push(newUser)
         .write();
       return newUser;
+    },
+
+    updateOne(id: string, updatedUserData: UpdateUser): User {
+      const updatedUser = db.get('users')
+        .find({ id, })
+        .assign(updatedUserData)
+        .write();
+      return updatedUser;
     },
   };
 };

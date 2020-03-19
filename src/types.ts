@@ -1,6 +1,7 @@
 export interface Config {
   port: string;
   logFormat: string;
+  jwtSecret: string;
 }
 
 export interface CreateUser {
@@ -15,4 +16,9 @@ export interface User {
   email: string;
   password: string;
   createdAt: number;
+}
+
+export interface UpdateUser {
+  name?: string;
+  email?: string;
 }
