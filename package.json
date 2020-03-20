@@ -1,7 +1,7 @@
 {
-  "name": "express-typescript",
+  "name": "express-typescript-starter",
   "version": "1.0.0",
-  "description": "",
+  "description": "Quickly create an Express server using Typescript without wasting time on boilerplate code",
   "main": "index.js",
   "scripts": {
     "test": "mocha -r ts-node/register src/test/**/*.spec.ts --timeout=10000 --exit",
@@ -9,8 +9,8 @@
     "build:dev": "tsc --watch --preserveWatchOutput",
     "dev": "concurrently \"npm run build:dev\" \"npm run start:dev\""
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["express", "typescript"],
+  "author": "Kurobara George Benjamin",
   "license": "ISC",
   "dependencies": {
     "@types/bcryptjs": "^2.4.2",
