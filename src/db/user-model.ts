@@ -1,8 +1,8 @@
 import nanoid from 'nanoid';
 import { LowdbSync } from 'lowdb';
-import { CreateUser, User, UpdateUser } from '../types';
+import { CreateUser, User, UpdateUser, Schema } from '../types';
 
-const createUserModel = (db: LowdbSync<any>) => {
+const createUserModel = (db: LowdbSync<Schema>) => {
   return {
     findOne(filter: { [key: string]: any }) {
       return db

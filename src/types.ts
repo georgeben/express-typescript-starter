@@ -2,6 +2,7 @@ export interface Config {
   port: string;
   logFormat: string;
   jwtSecret: string;
+  dbUrl: string;
 }
 
 export interface CreateUser {
@@ -22,3 +23,7 @@ export interface UpdateUser {
   name?: string;
   email?: string;
 }
+
+export type Schema = {
+  users: User[];
+};
