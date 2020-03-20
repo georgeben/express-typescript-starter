@@ -3,7 +3,7 @@ Quickly create an Express server using Typescript without wasting time on boiler
 
 ## What you get
 - Standard folder structure :file_folder:
-- Pre-installed essential packages for logging, and parsing request bodies :package:
+- Pre-installed essential packages for logging, and parsing request body :package:
 - One CRUD endpoint :floppy_disk:
 - Sign up / Sign in with email and password :closed_lock_with_key:
 - JsonWebToken authentication :cop:
